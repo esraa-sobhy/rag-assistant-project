@@ -1,0 +1,9 @@
+beautifulsoup4
+chromadb
+sentence-transformers
+langchain-core
+langchain-text-splitters
+langchain-huggingface
+langchain-chroma
+groq
+python-dotenv
