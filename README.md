@@ -80,8 +80,8 @@ The language model is accessed through the Groq API.
 rag-assistant-project/
 │
 ├── notebooks/
-│   └── rag_pipeline.ipynb
-│
+│   └── rag_assistant.ipynb
+│   └── rag_llm.ipynb
 ├── Data/
 │   └── ancient_egypt.html
 │
@@ -445,28 +445,13 @@ Environment variable templates are provided using:
 
 The raw document/corpus should also not be uploaded as an unnecessary raw corpus dump if excluded by the project requirements.
 
-## Demo
 
-A recorded end-to-end demonstration is provided showing:
-
-1. Starting the FastAPI backend
-2. Starting the Streamlit frontend
-3. Entering a question
-4. Sending the question to the API
-5. Retrieving relevant document chunks
-6. Generating the answer using Groq
-7. Displaying the grounded answer and sources
-
-### Demo Video
-
-[Watch the recorded project demo](YOUR_DEMO_VIDEO_LINK)
 
 ## Limitations
 
 * The assistant can only answer questions supported by the provided document.
 * Retrieval currently uses the top two chunks.
 * The project uses a text-only RAG pipeline.
-* Image understanding / YOLO functionality is not included because it is part of the optional Extended Track.
 
 ## Future Improvements
 
