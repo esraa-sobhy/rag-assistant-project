@@ -4,6 +4,53 @@ A Retrieval-Augmented Generation (RAG) application that answers questions about 
 
 The project uses a Chroma vector store for retrieval, Hugging Face embeddings for semantic search, Groq for LLM generation, FastAPI for the backend API, and Streamlit for the frontend interface.
 
+## Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <https://github.com/esraa-sobhy/rag-assistant-project.git>
+cd rag-assistant-project
+```
+
+### 2. Create and Activate a Virtual Environment
+
+Create a virtual environment:
+
+```bash
+py -m venv .venv
+```
+
+Activate it in Git Bash:
+
+```bash
+source .venv/Scripts/activate
+```
+
+### 3. Install Backend Requirements
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file inside the `backend` folder based on `.env.example`.
+
+Example:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=openai/gpt-oss-20b
+VECTOR_STORE_PATH=data/vector_store
+FRONTEND_ORIGIN=http://localhost:8501
+```
+
+Do not commit the real `.env` file or API key to GitHub.
+
+---
+
 ## Project Architecture
 
 ```text
@@ -80,8 +127,9 @@ The language model is accessed through the Groq API.
 rag-assistant-project/
 │
 ├── notebooks/
-│   └── rag_assistant.ipynb
+│   ├── rag_assistant.ipynb
 │   └── rag_llm.ipynb
+│
 ├── Data/
 │   └── ancient_egypt.html
 │
@@ -249,51 +297,6 @@ Response:
 }
 ```
 
-## Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd rag-assistant-project
-```
-
-### 2. Create and Activate a Virtual Environment
-
-Create a virtual environment:
-
-```bash
-py -m venv .venv
-```
-
-Activate it in Git Bash:
-
-```bash
-source .venv/Scripts/activate
-```
-
-### 3. Install Backend Requirements
-
-```bash
-cd backend
-pip install -r requirements.txt
-```
-
-### 4. Configure Environment Variables
-
-Create a `.env` file inside the `backend` folder based on `.env.example`.
-
-Example:
-
-```env
-GROQ_API_KEY=your_groq_api_key
-GROQ_MODEL=openai/gpt-oss-20b
-VECTOR_STORE_PATH=data/vector_store
-FRONTEND_ORIGIN=http://localhost:8501
-```
-
-Do not commit the real `.env` file or API key to GitHub.
-
 ## Running the Backend
 
 From the `backend` directory:
@@ -444,8 +447,6 @@ Environment variable templates are provided using:
 ```
 
 The raw document/corpus should also not be uploaded as an unnecessary raw corpus dump if excluded by the project requirements.
-
-
 
 ## Limitations
 
